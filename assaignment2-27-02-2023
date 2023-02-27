@@ -1,23 +1,19 @@
 #include<stdio.h>
 main()
 {
-	int i,n,r,k;
-	for(n=1;n<=5;n++)
+	int n,i,r,sum=0,k,l=0,j;
+	scanf("%d",&n);
+	while(n>0)
+	{	
+		 	r=n%10;
+			sum=sum+r;
+			n=n/10;
+    }
+	while(sum>0)
 	{
-		for(i=1;i<=n;i++)
-		{
-			printf("%d ",i);
-		}
-		printf("\n");
-		
-	}
-	for(k=4;k>=1;k--)
-	{
-		for(r=1;r<=k;r++)
-		{
-			printf("%d ",r);
-		}
-		printf("\n");
-		
-	}
+		 	k=sum%10;
+			l=l+k;
+			sum=sum/10; 
+    }
+    printf("%d",l);	
 }
